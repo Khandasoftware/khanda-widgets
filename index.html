@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khanda Widgets</title>
+    <script>
+function* parents(e, selector) {
+    while (e = e.parentElement) {
+        if ( e.matches(selector) ) {
+           yield e;
+        }
+    }
+ }
+ 
+//usage console.log( [...parents( e.target, '.khd-root')][0] )
+const khdToggable = () =>{
+    document.body.addEventListener('click', e => {
+        
+        e.stopPropagation()
+        
+        let clicked = e.target
+        
+        if( clicked.tagName =="svg" )
+            clicked = clicked.parentElement
+
+        if( ! clicked.hasAttribute("data-toggable_open") ) return
+
+        const parent = [...parents( e.target, '[data-toggable]')][0]
+        console.log( parent)
+
+        if( parent ){
+            parent.dataset.control ="open"
+        }
+
+    })
+
+    document.body.addEventListener('click', e => {
+        
+        e.stopPropagation()
+        
+        let clicked = e.target
+        
+        if( clicked.tagName =="svg" )
+            clicked = clicked.parentElement
+
+        if( ! clicked.hasAttribute("data-toggable_close") ) return
+
+        const parent = [...parents( e.target, '[data-toggable]')][0]
+        console.log( parent)
+
+        if( parent ){
+            parent.dataset.control ="close"
+        }
+
+    })
+}
+window.addEventListener('DOMContentLoaded', ()=> khdToggable())
+     </script>
+    <script src="./html-include.js"></script>
+</head>
+<body>
+<div w3-include-html="navigation.html"></div>
+<div w3-include-html="dropdown.html"></div>
+<div w3-include-html="accordion.html"></div>
+<script>includeHTML()</script>
+</body>
+</html>

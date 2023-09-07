@@ -1,0 +1,498 @@
+"list":{
+    "layout":{
+        "Columns": [{
+            "parent":[{"function":"repeat", "class":"khd-inputs"}],
+            "components": [
+              {
+                  "markup": "sub_input",
+                  "parameters": [
+                    {"class": "khd-property","value": "grid-template-columns","type": "text"}
+                  ]
+              },
+              {
+                "markup": "sub_input",
+                "parameters": [
+                  {"class": "khd-input khd-no-unit","value": "1","type": "number","step": "1","dedicated":"khd-navigation__list"}
+                ]
+              },
+              {
+                "markup": "sub_input",
+                "parameters": [
+                  {"class": "khd-input","value": "1","type": "number","step": "1","dedicated":"khd-navigation__list","max":"1","min":"1"}
+                ]
+              },
+              {
+                  "markup": "sub_input_select",
+                  "parameters": [
+                    {
+                        "class": "khd-units",
+                        "values": ["fr","px","rem","em","%","vw"]
+                    }
+                  ]
+              }
+            ]
+        }],
+        "justify-content": [{
+          "components": [
+              {
+                  "markup": "sub_input",
+                  "parameters": [
+                    {"class": "khd-property","value": "justify-content","type": "text"}
+                  ]
+              },
+              {
+                  "markup": "sub_input_select",
+                  "parameters": [
+                    {
+                        "class": "khd-input khd-no-unit",
+                        "values": [
+                          "start","center","end"
+                        ],
+                        "dedicated":"khd-navigation__list"
+                    }
+                  ]
+              }
+            ]
+        }],
+        "gap": [{
+            "components": [
+              {
+                "markup": "sub_input",
+                "parameters": [
+                  {
+                    "class": "khd-property", "type": "text", "value":"gap"
+                  }
+                ]
+              },
+              {
+                "markup": "sub_input",
+                "parameters": [
+                  {
+                    "class": "khd-input",
+                    "value": "0",
+                    "type": "number",
+                    "step": "0",
+                    "dedicated":"khd-navigation__list"
+                  }
+                ]
+              },
+              {
+                "markup": "sub_input_select",
+                "parameters": [
+                  {
+                    "class": "khd-units",
+                    "values": [ "px", "rem", "em", "%", "vw", "vh"]
+                  }
+                ]
+              }
+            ]
+
+        }],
+        "padding": [
+          {
+            "components": [
+              {
+                "markup": "sub_input_select",
+                "parameters": [
+                    {
+                      "class": "khd-property",
+                      "values": [ "padding", "padding-top", "padding-right", "padding-bottom", "padding-left" ]
+                    }
+                ]
+              },
+              {
+                "markup": "sub_input",
+                "parameters": [
+                  {
+                    "class": "khd-input",
+                    "value": "0",
+                    "type": "number",
+                    "step": "0",
+                    "dedicated":"khd-navigation__list"
+                  }
+                ]
+              },
+              {
+                "markup": "sub_input_select",
+                "parameters": [
+                  {
+                    "class": "khd-units",
+                    "values": [ "px", "rem", "em", "%", "vw", "vh"]
+                  }
+                ]
+              }
+            ]
+
+          }
+        ],
+        "max-width": [
+          {
+            "components": [
+                {
+                  "markup": "sub_input",
+                  "parameters": [
+                    {"class": "khd-property","value": "max-width","type": "text" }
+                    ]
+                },
+              {
+                "markup": "sub_input",
+                "parameters": [
+                  {
+                    "class": "khd-input","value": "0","type": "number","step": "0", "dedicated":"khd-navigation__list"
+                  }
+                ]
+              },
+              {
+                "markup": "sub_input_select",
+                "parameters": [
+                  {
+                    "class": "khd-units",
+                    "values": [
+                      "px","rem","em","%","vw","vh"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+    },
+    "background":{
+        "background-color": [{
+          "components": [
+              {
+                "markup": "sub_input",
+                "parameters": [
+                    {"class": "khd-property","value": "background-color","type": "text" }
+                ]
+              },
+              {
+                "markup": "sub_input",
+                "parameters": [
+                  {
+                    "class": "khd-input",
+                    "value": "#000000",
+                    "type": "color",
+                    "dedicated":"khd-navigation__list"
+                  }
+                ]
+              }
+          ]
+        }],
+        "background-image": [{
+            "parent":[{"function":"url", "class":"khd-inputs"}],
+            "components": [
+              {
+                  "markup": "sub_input",
+                  "parameters": [
+                    {"class": "khd-property","value": "background-image","type": "text"}
+                  ]
+              },
+              {
+                  "markup": "sub_input",
+                  "parameters": [
+                    {"class": "khd-input khd-no-unit","value": "place-holder.jpg","type": "url","dedicated":"khd-navigation__list"},
+                    { "class": "khd-image-upload", "value": "Upload", "type":"file"}
+                  ]
+              }
+            ]
+        }],
+        "background-position": [{
+          "components": [
+            {
+                "markup": "sub_input",
+                "parameters": [
+                  {"class": "khd-property","value": "background-position","type": "text"}
+                ]
+            },
+            {
+                "markup": "sub_input_select",
+                "parameters": [
+                  {
+                      "class": "khd-input khd-no-unit",
+                      "values": [
+                        "left top",
+                        "left center",
+                        "left bottom",
+                        "right top",
+                        "right center",
+                        "right bottom",
+                        "center top",
+                        "center center",
+                        "center bottom"
+                      ],
+                      "dedicated":"khd-navigation__list"
+                  }
+                ]
+            }
+          ]
+        }],
+        "Background-size": [{
+            "components": [
+              {
+                  "markup": "sub_input",
+                  "parameters": [
+                    {"class": "khd-property","value": "Background-size","type": "text"}
+                  ]
+              },
+              {
+                  "markup": "sub_input_select",
+                  "parameters": [
+                    {
+                        "class": "khd-input khd-no-unit",
+                        "values": ["cover","contain","auto","inherit","initial"],
+                        "dedicated":"khd-navigation__list"
+                    }
+                  ]
+              }
+            ]
+        }],
+        "Background-repeat": [{
+            "components": [
+              {
+                  "markup": "sub_input",
+                  "parameters": [
+                    {"class": "khd-property","value": "Background-repeat","type": "text"}
+                  ]
+              },
+              {
+                  "markup": "sub_input_select",
+                  "parameters": [
+                    {
+                        "class": "khd-input khd-no-unit",
+                        "values": [
+                          "no-repeat","repeat-x","repeat-y"
+                        ],
+                        "dedicated":"khd-navigation__list"
+                    }
+                  ]
+              }
+            ]
+        }],
+        "background-attachment": [{
+            "components": [
+              {
+                  "markup": "sub_input",
+                  "parameters": [
+                    {"class": "khd-property","value": "background-attachment","type": "text"}
+                  ]
+              },
+              {
+                  "markup": "sub_input_select",
+                  "parameters": [
+                    {
+                        "class": "khd-input khd-no-unit",
+                        "values": [
+                          "scroll","fixed","local",
+                          "inherit","initial"
+                        ],
+                        "dedicated":"khd-navigation__list"
+                    }
+                  ]
+              }
+            ]
+        }]
+    },
+    "border":{
+      "border": [{
+        "components": [
+          {
+              "markup": "sub_input_select",
+              "parameters": [
+                {
+                    "class": "khd-property",
+                    "values": ["border","border-top","border-bottom","border-left","border-right"],
+                    "dedicated":"khd-navigation__list"
+                }
+              ]
+          },
+          {
+              "markup": "sub_input",
+              "parameters": [
+                {"class": "khd-input","value": "0","type": "number","step": "0", "dedicated":"khd-vertical-cards-widget"}
+              ]
+          },
+          {
+              "markup": "sub_input_select",
+              "parameters": [
+                {
+                    "class": "khd-input khd-no-unit",
+                    "values": ["solid","dotted","dashed","double","groove","ridge","inset","outset","none","hidden"],
+                    "dedicated":"khd-navigation__list"
+                }
+              ]
+          },
+          {
+              "markup": "sub_input",
+              "parameters": [
+                {"class": "khd-input","value": "#000000","type": "color","dedicated":"khd-navigation__list"}
+              ]
+          },
+          {
+              "markup": "sub_input_select",
+              "parameters": [
+                {
+                    "class": "khd-units",
+                    "values": ["px","rem","em","%","vw"],
+                    "dedicated":"khd-navigation__list"
+                }
+              ]
+          }
+        ]
+      }],
+      "box-shadow": [{
+          "components": [
+            {
+                "markup": "sub_input",
+                "parameters": [
+                  {"class": "khd-property","value": "box-shadow","type": "text"}
+                ]
+            },
+            {
+                "markup": "sub_input",
+                "parameters": [
+                  {"class": "khd-input","value": "0","type": "number","step": "0" , "dedicated":"khd-navigation__list"}
+                ]
+            },
+            {
+                "markup": "sub_input",
+                "parameters": [
+                  {"class": "khd-input","value": "0","type": "number","step": "0" , "dedicated":"khd-navigation__list"}
+                ]
+            },
+            {
+                "markup": "sub_input",
+                "parameters": [
+                  {"class": "khd-input","value": "0","type": "number","step": "0" , "dedicated":"khd-navigation__list"}
+                ]
+            },
+            {
+                "markup": "sub_input",
+                "parameters": [
+                  {"class": "khd-input","value": "#000000","type": "color" , "dedicated":"khd-navigation__list"}
+                ]
+            },
+            {
+                "markup": "sub_input_select",
+                "parameters": [
+                  {
+                      "class": "khd-units",
+                      "values": ["px","rem","em","%","vw"]
+                  }
+                ]
+            }
+          ]
+      }],
+      "border-radius": [{
+          "components": [
+            {
+                "markup": "sub_input",
+                "parameters": [
+                  {"class": "khd-property","value": "border-radius","type": "text"}
+                ]
+            },
+            {
+                "markup": "sub_input",
+                "parameters": [
+                  {"class": "khd-input","value": "0","type": "number","step": "0", "dedicated":"khd-navigation__list"}
+                ]
+            },
+            {
+                "markup": "sub_input",
+                "parameters": [
+                  {"class": "khd-input","value": "0","type": "number","step": "0", "dedicated":"khd-navigation__list"}
+                ]
+            },
+            {
+                "markup": "sub_input",
+                "parameters": [
+                  {"class": "khd-input","value": "0","type": "number","step": "0", "dedicated":"khd-navigation__list"}
+                ]
+            },
+            {
+                "markup": "sub_input",
+                "parameters": [
+                  {"class": "khd-input","value": "0","type": "number","step": "0", "dedicated":"khd-navigation__list"}
+                ]
+            },
+            {
+                "markup": "sub_input_select",
+                "parameters": [
+                  {
+                      "class": "khd-units",
+                      "values": ["px","rem","em","%","vw"]
+                  }
+                ]
+            }
+          ]
+      }],
+      "outline": [{
+          "components": [
+            {
+                "markup": "sub_input_select",
+                "parameters": [
+                  {
+                      "class": "khd-property",
+                      "values": ["outline","outline-top","outline-bottom","outline-left","outline-right"]
+                  }
+                ]
+            },
+            {
+                "markup": "sub_input",
+                "parameters": [
+                  {"class": "khd-input","value": "0","type": "number","step": "0", "dedicated":"khd-navigation__list"}
+                ]
+            },
+            {
+                "markup": "sub_input_select",
+                "parameters": [
+                  {
+                      "class": "khd-input khd-no-unit",
+                      "values": ["solid","dotted"], "dedicated":"khd-navigation__list"
+                  }
+                ]
+            },
+            {
+                "markup": "sub_input",
+                "parameters": [
+                  {"class": "khd-input","value": "#000000","type": "color", "dedicated":"khd-navigation__list"}
+                ]
+            },
+            {
+                "markup": "sub_input_select",
+                "parameters": [
+                  {
+                      "class": "khd-units",
+                      "values": ["px","rem","em","%","vw"]
+                  }
+                ]
+            }
+          ]
+      }],
+      "outline (more )": [
+        {
+          "components": [
+            {
+                "markup": "sub_input_select",
+                "parameters": [
+                  {
+                      "class": "khd-property",
+                      "values": ["outline","outline-top","outline-bottom","outline-left","outline-right"]
+                  }
+                ]
+            },
+            {
+              "markup": "sub_input_select",
+              "parameters": [
+                {
+                  "class": "khd-input khd-no-unit",
+                  "values": [ "none","auto", "initial", "inherit"],
+                  "dedicated":"khd-navigation__list"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
